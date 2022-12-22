@@ -184,7 +184,7 @@ jobs:
         shell: bash
         run: bash build/ci-install-rust.sh
 
-      - uses: actions/setup-python@v2.2.2
+      - uses: actions/setup-python@v4.4.0
         with:
           python-version: 3.6
       - name: Install Python tools
@@ -350,7 +350,7 @@ jobs:
         shell: bash
         run: bash build/ci-install-rust.sh
 
-      - uses: actions/setup-python@v2.2.2
+      - uses: actions/setup-python@v4.4.0
         with:
           python-version: 3.6
       - name: Install Python tools
@@ -365,7 +365,7 @@ jobs:
           ./build/build-python --no-set-rustflags --python python --quick-check
           git clean -xdf
 
-      - uses: actions/setup-python@v2.2.2
+      - uses: actions/setup-python@v4.4.0
         with:
           python-version: 3.6
       - name: Build and test the wheel
@@ -374,7 +374,7 @@ jobs:
           python --version 2>&1 | grep "Python 3\.6"
           bash build/ci-py-build-wheels.sh
 
-      - uses: actions/setup-python@v2.2.2
+      - uses: actions/setup-python@v4.4.0
         with:
           python-version: 3.7
       - name: Build and test the wheel
@@ -383,7 +383,7 @@ jobs:
           python --version 2>&1 | grep "Python 3\.7"
           bash build/ci-py-build-wheels.sh
 
-      - uses: actions/setup-python@v2.2.2
+      - uses: actions/setup-python@v4.4.0
         with:
           python-version: 3.8
       - name: Build and test the wheel
@@ -392,7 +392,7 @@ jobs:
           python --version 2>&1 | grep "Python 3\.8"
           bash build/ci-py-build-wheels.sh
 
-      - uses: actions/setup-python@v2.2.2
+      - uses: actions/setup-python@v4.4.0
         with:
           python-version: 3.9
       - name: Build and test the wheel
@@ -437,7 +437,7 @@ jobs:
           rustup default stable-i686-pc-windows-msvc
           rustup show
 
-      - uses: actions/setup-python@v2.2.2
+      - uses: actions/setup-python@v4.4.0
         with:
           python-version: 3.6
           architecture: x86
@@ -447,7 +447,7 @@ jobs:
           python --version 2>&1 | grep "Python 3\.6"
           bash build/ci-py-build-wheels.sh
 
-      - uses: actions/setup-python@v2.2.2
+      - uses: actions/setup-python@v4.4.0
         with:
           python-version: 3.7
           architecture: x86
@@ -457,7 +457,7 @@ jobs:
           python --version 2>&1 | grep "Python 3\.7"
           bash build/ci-py-build-wheels.sh
 
-      - uses: actions/setup-python@v2.2.2
+      - uses: actions/setup-python@v4.4.0
         with:
           python-version: 3.8
           architecture: x86
@@ -467,7 +467,7 @@ jobs:
           python --version 2>&1 | grep "Python 3\.8"
           bash build/ci-py-build-wheels.sh
 
-      - uses: actions/setup-python@v2.2.2
+      - uses: actions/setup-python@v4.4.0
         with:
           python-version: 3.9
           architecture: x86
@@ -512,7 +512,7 @@ jobs:
       - uses: actions/setup-dotnet@v1.8.1
         with:
           dotnet-version: ${{env.CI_REQ_DOTNET_SDK_VER}}
-      - uses: actions/setup-python@v2.2.2
+      - uses: actions/setup-python@v4.4.0
         with:
           python-version: 3.x
       - uses: actions/setup-node@v2.3.0
